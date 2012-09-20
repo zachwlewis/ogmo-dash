@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OgmoVersion>2.1.0.2</OgmoVersion>
+  <Name>Ogmo Dash</Name>
+  <BackgroundColor A="255" R="0" G="0" B="0" />
+  <GridColor A="255" R="128" G="128" B="128" />
+  <LevelDefaultSize>
+    <Width>1024</Width>
+    <Height>1024</Height>
+  </LevelDefaultSize>
+  <LevelMinimumSize>
+    <Width>512</Width>
+    <Height>512</Height>
+  </LevelMinimumSize>
+  <LevelMaximumSize>
+    <Width>4096</Width>
+    <Height>4096</Height>
+  </LevelMaximumSize>
+  <Filename>C:\Users\Zachary\Documents\ogmo-dash\levels\ogmo-dash.oep</Filename>
+  <AngleMode>Degrees</AngleMode>
+  <CameraEnabled>false</CameraEnabled>
+  <CameraSize>
+    <Width>640</Width>
+    <Height>480</Height>
+  </CameraSize>
+  <ExportCameraPosition>false</ExportCameraPosition>
+  <LevelValueDefinitions>
+    <ValueDefinition xsi:type="StringValueDefinition" Name="name" Default="Untitled Level" MaxChars="-1" MultiLine="false" />
+  </LevelValueDefinitions>
+  <LayerDefinitions>
+    <LayerDefinition xsi:type="GridLayerDefinition">
+      <Name>Grid</Name>
+      <Grid>
+        <Width>32</Width>
+        <Height>32</Height>
+      </Grid>
+      <ScrollFactor>
+        <X>1</X>
+        <Y>1</Y>
+      </ScrollFactor>
+      <Color A="255" R="255" G="255" B="255" />
+      <ExportMode>Bitstring</ExportMode>
+    </LayerDefinition>
+    <LayerDefinition xsi:type="EntityLayerDefinition">
+      <Name>Entities</Name>
+      <Grid>
+        <Width>8</Width>
+        <Height>8</Height>
+      </Grid>
+      <ScrollFactor>
+        <X>1</X>
+        <Y>1</Y>
+      </ScrollFactor>
+    </LayerDefinition>
+  </LayerDefinitions>
+  <Tilesets />
+  <EntityDefinitions>
+    <EntityDefinition Name="PlayerStart" Limit="1" ResizableX="false" ResizableY="false" Rotatable="true" RotateIncrement="90">
+      <Size>
+        <Width>32</Width>
+        <Height>32</Height>
+      </Size>
+      <Origin>
+        <X>16</X>
+        <Y>16</Y>
+      </Origin>
+      <ImageDefinition DrawMode="Image" ImagePath="..\assets\player.png" Tiled="false">
+        <RectColor A="255" R="255" G="0" B="0" />
+      </ImageDefinition>
+      <ValueDefinitions />
+      <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
+    </EntityDefinition>
+  </EntityDefinitions>
+</project>

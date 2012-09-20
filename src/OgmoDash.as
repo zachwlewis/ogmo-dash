@@ -28,7 +28,7 @@ package
 		{
 			super.init();
 			trace("FlashPunk version " + FP.VERSION + " started.");
-			FP.world = new GameWorld();
+			FP.world = new GameWorld(A.LEVEL);
 		}
 		
 	}

@@ -138,6 +138,14 @@ package worlds
 		protected function loadMap(mapData:Class):void
 		{
 			// TODO: Add map creation code.
+			var mapXML:XML = FP.getXML(mapData);
+			
+			// Create our map grid.
+			_mapGrid = new Grid(uint(mapXML.@width), uint(mapXML.@height), 32, 32, 0, 0);
+			_mapGrid.loadFromString(String(mapXML.Grid), "", "\n");
+			
+			// Create a player at the player start.
+			player = new Player(int(mapXML.Entities.PlayerStart.@x), int(mapXML.Entities.PlayerStart.@y), int(mapXML.Entities.PlayerStart.@angle));
 		}
 		
 	}

@@ -11,6 +11,9 @@ package
 		
 		/** The player graphic. */
 		[Embed(source = "../assets/background.png")] public static const BACKGROUND:Class;
+		
+		/** The level file. */
+		[Embed(source = "../levels/tutorial.oel", mimeType = "application/octet-stream")] public static const LEVEL:Class;
 	}
 
 }
