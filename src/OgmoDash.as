@@ -4,6 +4,7 @@ package
 	import net.flashpunk.FP;
 	import worlds.GameWorld;
 	
+	// The size of our SWF.
 	[SWF(width="512", height="448")]
 	
 	/**
@@ -18,16 +19,16 @@ package
 		
 		public function OgmoDash():void 
 		{
+			// Note that the FlashPunk instance is larger than the SWF.
+			// This is to prevent rotation from showing white edges.
 			super(800, 800);
-			FP.screen.scale = 1;
-			//FP.console.enable();
 		}
 		
 		override public function init():void 
 		{
 			super.init();
 			trace("FlashPunk version " + FP.VERSION + " started.");
-			FP.world = new GameWorld;
+			FP.world = new GameWorld();
 		}
 		
 	}
