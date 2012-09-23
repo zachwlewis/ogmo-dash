@@ -4,6 +4,7 @@ package entities
 	import net.flashpunk.graphics.*;
 	import net.flashpunk.tweens.misc.*;
 	import net.flashpunk.utils.*;
+	import worlds.RotatableWorld;
 	
 	/**
 	 * Core player movement and rotation logic.
@@ -101,8 +102,7 @@ package entities
 		protected function updateRotation(doTween:Boolean = true):void
 		{
 			// Normalize the player's angle from [0, 360).
-			if (_ang >= 360) _ang -= 360;
-			else if (_ang < 0) _ang += 360;
+			if(_ang >= 360 || _ang < 0) { _ang = RotatableWorld.normalizeAngle(_ang); }
 			
 			// Get the direction of travel based on _ang.
 			_vx = Math.cos(FP.RAD * _ang);

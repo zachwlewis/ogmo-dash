@@ -3,6 +3,7 @@ package
 	import net.flashpunk.Engine;
 	import net.flashpunk.FP;
 	import worlds.GameWorld;
+	import worlds.MenuWorld;
 	
 	// The size of our SWF.
 	[SWF(width="512", height="448")]
@@ -28,7 +29,7 @@ package
 		{
 			super.init();
 			trace("FlashPunk version " + FP.VERSION + " started.");
-			FP.world = new GameWorld(A.LEVEL);
+			FP.world = new MenuWorld();
 		}
 		
 	}

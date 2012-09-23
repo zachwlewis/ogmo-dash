@@ -16,15 +16,18 @@
     <Width>4096</Width>
     <Height>4096</Height>
   </LevelMaximumSize>
-  <Filename>C:\Users\Zachary\Documents\ogmo-dash\levels\ogmo-dash.oep</Filename>
-  <AngleMode>Radians</AngleMode>
+  <Filename>C:\Users\Zachary\Documents\GitHub\ogmo-dash\levels\ogmo-dash.oep</Filename>
+  <AngleMode>Degrees</AngleMode>
   <CameraEnabled>false</CameraEnabled>
   <CameraSize>
     <Width>640</Width>
     <Height>480</Height>
   </CameraSize>
   <ExportCameraPosition>false</ExportCameraPosition>
-  <LevelValueDefinitions />
+  <LevelValueDefinitions>
+    <ValueDefinition xsi:type="StringValueDefinition" Name="Name" Default="Untitled Level" MaxChars="-1" MultiLine="false" />
+    <ValueDefinition xsi:type="FloatValueDefinition" Name="Speed" Default="200" Min="0" Max="1000" Round="0.1" />
+  </LevelValueDefinitions>
   <LayerDefinitions>
     <LayerDefinition xsi:type="GridLayerDefinition">
       <Name>Grid</Name>

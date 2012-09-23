@@ -4,7 +4,9 @@ Source code for a tutorial on using FlashPunk 1.6 and Ogmo Editor 2.1.
 
 Tutorial 1
 ----------
-Zachary goes over the codebase, the basics of working with an Ogmo Editor 2 project and reading XML with FlashPunk's toolset, creating a Grid and spawning a Player. [Watch on YouTube](http://www.youtube.com/watch?v=dgg42q8xQGc)
+Zachary goes over the codebase, the basics of working with an Ogmo Editor 2 project and reading XML with FlashPunk's toolset, creating a Grid and spawning a Player.
+
+[Tutorial 1 on YouTube](http://www.youtube.com/watch?v=dgg42q8xQGc)
 
 ### Tutorial Goals
 * Ogmo Editor

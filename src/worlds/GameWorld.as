@@ -10,11 +10,10 @@ package worlds
 	 * Core game world logic.
 	 * @author Zachary Lewis (http://zacharylew.is)
 	 */
-	public class GameWorld extends World 
+	public class GameWorld extends RotatableWorld 
 	{
 		protected var player:Player;
 		protected var map:Entity;
-		protected var background:Backdrop;
 		
 		protected var _mapGrid:Grid;
 		protected var _mapImage:Image;
@@ -47,9 +46,6 @@ package worlds
 				player = new Player(640, 640);
 			}
 			
-			// Create tiled background for movement reference.
-			background = new Backdrop(A.BACKGROUND, true, true);
-			
 			// Create an image based on the map's data and scale it accordingly.
 			_mapImage = new Image(_mapGrid.data);
 			_mapImage.scale = 32;
@@ -63,30 +59,26 @@ package worlds
 		{
 			super.begin();
 			
-			// Set our screen for rotation.
-			FP.screen.x = (C.GAME_WIDTH - FP.screen.width) * 0.5;
-			FP.screen.y = (C.GAME_HEIGHT - FP.screen.height) * 0.5;
-			FP.screen.originX = FP.screen.width * 0.5;
-			FP.screen.originY = FP.screen.height * 0.5;
-			FP.screen.smoothing = true;
-			
 			// Add the game entities to GameWorld.
 			add(player);
 			
 			// No need to reference these entities again.
-			addGraphic(background, 1);
 			add(map);
 		}
 		
 		override public function update():void 
 		{
 			super.update();
+			
+			// Let the user quit at any time.
+			if (Input.pressed(Key.ESCAPE)) FP.world = new MenuWorld();
+			
 			if (_didLose)
 			{
 				// The player has lost.
 				
 				// Slowly rotate the screen.
-				FP.screen.angle += 45 * FP.elapsed;
+				angle += 45 * FP.elapsed;
 				
 				// When space is pressed, create a new GameWorld with the
 				// current map.
@@ -101,23 +93,22 @@ package worlds
 				
 				// Update the camera and screen to match the player and keep him
 				// facing forward.
-				camera.x = player.x - FP.screen.width * 0.5;
-				camera.y = player.y - FP.screen.height * 0.5;
-				FP.screen.angle = 90 - player.angle;
+				centerScreenAt(player.x, player.y);
+				angle = 90 - player.angle;
 				
 				// Check the keyboard for updates and pass them to the player.
 				handleInput();
 				
-				// If the player collides with the map, remove him and wait to
-				// respawn.
-				if (map.collideWith(player, 0, 0))
-				{
-					_didLose = true;
-					remove(player);
-				}
+				// Check to see if the player ran into a wall.
+				handleWallCollision();
+				
+				// Check to see if the player collected a star.
+				handleStarCollision();
+				
 			}
-		}
+		} 
 		
+		/** Parse player input and apply it to the game. */
 		protected function handleInput():void
 		{
 			// Check the left and right input and save the sum to n.
@@ -126,12 +117,33 @@ package worlds
 			var n:int = 0
 			if (Input.pressed(Key.LEFT)) n--;
 			if (Input.pressed(Key.RIGHT)) n++;
-			
 			// Based on n, determine if the player should spin.
 			if (n != 0)
 			{
 				if (n < 0) player.spinLeft();
 				else player.spinRight();
+			}
+		}
+		
+		/** If the player collides with the map, remove him and wait for the player to respawn. */
+		protected function handleWallCollision():void
+		{
+			if (map.collideWith(player, 0, 0))
+			{
+				_didLose = true;
+				remove(player);
+			}
+		}
+		
+		/** If the player collides with a star, remove the star and increment his map score. */
+		protected function handleStarCollision():void
+		{
+			var star:Star = Star(player.collide("star", player.x, player.y));
+			if (star != null)
+			{
+				remove(star);
+				// TODO: Update player's star count.
+				// TODO: Play collection animation.
 			}
 		}
 		
@@ -146,6 +158,15 @@ package worlds
 			
 			// Create a player at the player start.
 			player = new Player(int(mapXML.Entities.PlayerStart.@x), int(mapXML.Entities.PlayerStart.@y), int(mapXML.Entities.PlayerStart.@angle));
+			
+			// Pre-align our world to prevent view snapping.
+			angle = player.angle;
+			
+			// TODO: Add code for star and finish line creation.
+			for each (var node:XML in mapXML.Entities.Star)
+			{
+				add(new Star(int(node.@x), int(node.@y)));
+			}
 		}
 		
 	}
