@@ -3,7 +3,7 @@
   <OgmoVersion>2.1.0.2</OgmoVersion>
   <Name>Ogmo Dash</Name>
   <BackgroundColor A="255" R="0" G="0" B="0" />
-  <GridColor A="255" R="128" G="128" B="128" />
+  <GridColor A="255" R="58" G="58" B="58" />
   <LevelDefaultSize>
     <Width>1024</Width>
     <Height>1024</Height>
@@ -17,16 +17,14 @@
     <Height>4096</Height>
   </LevelMaximumSize>
   <Filename>C:\Users\Zachary\Documents\ogmo-dash\levels\ogmo-dash.oep</Filename>
-  <AngleMode>Degrees</AngleMode>
+  <AngleMode>Radians</AngleMode>
   <CameraEnabled>false</CameraEnabled>
   <CameraSize>
     <Width>640</Width>
     <Height>480</Height>
   </CameraSize>
   <ExportCameraPosition>false</ExportCameraPosition>
-  <LevelValueDefinitions>
-    <ValueDefinition xsi:type="StringValueDefinition" Name="name" Default="Untitled Level" MaxChars="-1" MultiLine="false" />
-  </LevelValueDefinitions>
+  <LevelValueDefinitions />
   <LayerDefinitions>
     <LayerDefinition xsi:type="GridLayerDefinition">
       <Name>Grid</Name>
@@ -65,6 +63,36 @@
         <Y>16</Y>
       </Origin>
       <ImageDefinition DrawMode="Image" ImagePath="..\assets\player.png" Tiled="false">
+        <RectColor A="255" R="255" G="0" B="0" />
+      </ImageDefinition>
+      <ValueDefinitions />
+      <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
+    </EntityDefinition>
+    <EntityDefinition Name="FinishLine" Limit="-1" ResizableX="true" ResizableY="true" Rotatable="false" RotateIncrement="15">
+      <Size>
+        <Width>8</Width>
+        <Height>8</Height>
+      </Size>
+      <Origin>
+        <X>0</X>
+        <Y>0</Y>
+      </Origin>
+      <ImageDefinition DrawMode="Image" ImagePath="..\assets\finish-line.png" Tiled="true">
+        <RectColor A="255" R="255" G="0" B="0" />
+      </ImageDefinition>
+      <ValueDefinitions />
+      <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
+    </EntityDefinition>
+    <EntityDefinition Name="Star" Limit="3" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
+      <Size>
+        <Width>32</Width>
+        <Height>32</Height>
+      </Size>
+      <Origin>
+        <X>16</X>
+        <Y>16</Y>
+      </Origin>
+      <ImageDefinition DrawMode="Image" ImagePath="..\assets\star.png" Tiled="false">
         <RectColor A="255" R="255" G="0" B="0" />
       </ImageDefinition>
       <ValueDefinitions />
