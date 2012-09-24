@@ -5,7 +5,7 @@ package entities
 	import net.flashpunk.graphics.Text;
 	
 	/**
-	 * ...
+	 * A menu item in the level select menu.
 	 * @author Zachary Lewis (http://zacharylew.is)
 	 */
 	public class LevelMenuItem extends Entity 
@@ -25,7 +25,7 @@ package entities
 		public function LevelMenuItem(x:Number, y:Number, angle:Number, levelData:Class)
 		{
 			generateMetadata(levelData);
-			_text = new Text(levelName);
+			_text = new Text(levelName, 0, 0, { font:"orbitron black", size:36 } );
 			_angle = angle;
 			_text.angle = _angle;
 			_selected = false;

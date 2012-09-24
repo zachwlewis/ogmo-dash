@@ -20,6 +20,6 @@
     <Star id="1" x="280" y="160" />
     <Star id="2" x="584" y="392" />
     <Star id="3" x="728" y="264" />
-    <FinishLine id="4" x="912" y="64" width="48" height="384" />
+    <Finish id="4" x="904" y="64" width="56" height="384" />
   </Entities>
 </level>

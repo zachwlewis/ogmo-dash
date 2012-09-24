@@ -71,7 +71,7 @@
       <ValueDefinitions />
       <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
     </EntityDefinition>
-    <EntityDefinition Name="FinishLine" Limit="-1" ResizableX="true" ResizableY="true" Rotatable="false" RotateIncrement="15">
+    <EntityDefinition Name="Finish" Limit="-1" ResizableX="true" ResizableY="true" Rotatable="false" RotateIncrement="15">
       <Size>
         <Width>8</Width>
         <Height>8</Height>

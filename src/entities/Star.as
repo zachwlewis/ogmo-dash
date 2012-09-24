@@ -22,6 +22,8 @@ package entities
 			
 			type = "star";
 			
+			_image.color = 0xFDE06F;
+			
 			super(x, y, _image);
 		}
 		
