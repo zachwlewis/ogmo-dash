@@ -7,13 +7,13 @@ References & Source
 * [Tutorial Repository](https://github.com/zachwlewis/ogmo-dash)
 * [FlashPunk](https://github.com/Draknek/FlashPunk)
 * [Ogmo Editor](http://www.ogmoeditor.com/)
-* [Video Series on YouTube]()
+* [Video Series on YouTube](http://www.youtube.com/playlist?list=PL68WtdRH6G0lRChjCq1E0R5k3ptYFuKeo)
 
 Tutorial 1
 ----------
 Zachary goes over the codebase, the basics of working with an Ogmo Editor 2 project and reading XML with FlashPunk's toolset, creating a Grid and spawning a Player.
 
-* [Tutorial 1 on YouTube](http://www.youtube.com/watch?v=dgg42q8xQGc)
+* [Tutorial 1 on YouTube](http://youtu.be/TPPzgB3fv8A)
 * [Source code on GitHub](https://github.com/downloads/zachwlewis/ogmo-dash/ogmo-dash-tutorial-1.zip)
 
 ### Tutorial Goals
@@ -34,7 +34,7 @@ Tutorial 2
 ----------
 Zachary covers adding properties to levels in Ogmo Editor and adding new entities with placement limits and resizeability. Additionally, he discusses an efficient way to work with multiple levels.
 
-* [Tutorial 2 on YouTube](http://www.youtube.com/watch?v=piSTP8iBxbc)
+* [Tutorial 2 on YouTube](http://youtu.be/5MHNPI7Iizs)
 * [Source code on GitHub](https://github.com/downloads/zachwlewis/ogmo-dash/ogmo-dash-tutorial-2.zip)
 
 ### Tutorial Goals
