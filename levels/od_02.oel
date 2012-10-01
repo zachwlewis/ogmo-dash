@@ -1,4 +1,4 @@
-<level width="1024" height="512" Name="Level Two" Speed="200">
+<level width="1024" height="512" Name="Get Ready" Speed="200">
   <Grid exportMode="Bitstring">11111111111111111111111111111111
 11111111110000000000000000001111
 11000001110000000000000000001111
@@ -17,9 +17,9 @@
 11111111111111111111111111111111</Grid>
   <Entities>
     <PlayerStart id="0" x="96" y="264" angle="0" />
-    <Star id="1" x="280" y="160" />
-    <Star id="2" x="584" y="392" />
-    <Star id="3" x="728" y="264" />
-    <Finish id="4" x="768" y="392" width="192" height="56" />
+    <Star id="1" x="272" y="152" />
+    <Star id="2" x="608" y="456" />
+    <Star id="3" x="736" y="264" />
+    <Finish id="4" x="768" y="400" width="192" height="48" />
   </Entities>
 </level>

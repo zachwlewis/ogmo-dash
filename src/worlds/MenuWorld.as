@@ -36,12 +36,16 @@ package worlds
 			_menuTween = new MultiVarTween();
 			addTween(_menuTween, false);
 			var i:uint = 1;
-			while (A[getLevelString(i)] != null)
+			
+			// Iterate through our L class, grabbing levels until there are no more.
+			while (L[getLevelString(i)] != null)
 			{
 				var itemAngle:Number = (i - 1) * 15;
-				levelList.push(new LevelMenuItem(200 * Math.cos(itemAngle * FP.RAD), 200 * Math.sin(itemAngle * FP.RAD), itemAngle , A[getLevelString(i)]));
+				levelList.push(new LevelMenuItem(200 * Math.cos(itemAngle * FP.RAD), 200 * Math.sin(itemAngle * FP.RAD), itemAngle , L[getLevelString(i)]));
 				i++;
 			}
+			
+			// Positioning for the menu.
 			_cx = 200;
 			_cy = 0;
 			_ang = 0;
@@ -84,6 +88,10 @@ package worlds
 			}
 		}
 		
+		/**
+		 * Selects an item from the list and applies a tween
+		 * @param	index The item index to select.
+		 */
 		protected function selectItem(index:int):void
 		{
 			// Prevent out-of-bounds level selection.
@@ -102,14 +110,24 @@ package worlds
 			_currentIndex = index;
 		}
 		
+		/**
+		 * Generate the string name of a level based on a provided index.
+		 * @param	index The index of the level to generate a string name.
+		 * @return The string name of a level.
+		 */
 		protected function getLevelString(index:int):String
 		{
+			// This assumes all levels follow the naming structure "OD_xx".
 			var s:String = "OD_";
 			if (index < 10) { s += "0"; }
 			s += index.toString();
 			return s;
 		}
 		
+		/**
+		 * Creates a GameWorld based on a provided level index.
+		 * @param	index The index of the world to load.
+		 */
 		protected function load(index:int):void
 		{
 			V.CurrentLevel = index;

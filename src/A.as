@@ -23,11 +23,6 @@ package
 		[Embed(source = '../assets/Orbitron Bold.ttf', embedAsCFF = "false", fontFamily = 'orbitron bold')] public static const FONT_ORBITRON_BOLD:Class;
 		[Embed(source = '../assets/Orbitron Medium.ttf', embedAsCFF = "false", fontFamily = 'orbitron medium')] public static const FONT_ORBITRON_MEDIUM:Class;
 		[Embed(source = '../assets/Orbitron Light.ttf', embedAsCFF = "false", fontFamily = 'orbitron light')] public static const FONT_ORBITRON_LIGHT:Class;
-		
-		/** The level files. */
-		[Embed(source = "../levels/od_01.oel", mimeType = "application/octet-stream")] public static const OD_01:Class;
-		[Embed(source = "../levels/od_02.oel", mimeType = "application/octet-stream")] public static const OD_02:Class;
-		[Embed(source = "../levels/od_03.oel", mimeType = "application/octet-stream")] public static const OD_03:Class;
 	}
 
 }

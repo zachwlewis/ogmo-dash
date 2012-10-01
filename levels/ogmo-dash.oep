@@ -26,7 +26,7 @@
   <ExportCameraPosition>false</ExportCameraPosition>
   <LevelValueDefinitions>
     <ValueDefinition xsi:type="StringValueDefinition" Name="Name" Default="Untitled Level" MaxChars="-1" MultiLine="false" />
-    <ValueDefinition xsi:type="FloatValueDefinition" Name="Speed" Default="200" Min="0" Max="1000" Round="0.1" />
+    <ValueDefinition xsi:type="FloatValueDefinition" Name="Speed" Default="200" Min="100" Max="1000" Round="0.1" />
   </LevelValueDefinitions>
   <LayerDefinitions>
     <LayerDefinition xsi:type="GridLayerDefinition">

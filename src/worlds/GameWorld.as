@@ -233,8 +233,8 @@ package worlds
 		 */
 		protected function loadMap(mapData:Class):void
 		{
-			// TODO: Add map creation code.
 			var mapXML:XML = FP.getXML(mapData);
+			var node:XML;
 			
 			// Create our map grid.
 			_mapGrid = new Grid(uint(mapXML.@width), uint(mapXML.@height), 32, 32, 0, 0);
@@ -247,7 +247,7 @@ package worlds
 			angle = player.angle;
 			
 			// TODO: Add code for stars.
-			for each (var node:XML in mapXML.Entities.Star)
+			for each (node in mapXML.Entities.Star)
 			{
 				add(new Star(int(node.@x), int(node.@y)));
 			}
@@ -257,6 +257,7 @@ package worlds
 			{
 				add(new FinishArea(int(node.@x), int(node.@y), int(node.@width), int(node.@height)));
 			}
+			
 		}
 		
 	}

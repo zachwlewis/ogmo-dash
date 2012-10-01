@@ -1,6 +1,8 @@
-OgmoDash
-========
+Ogmo Dash
+=========
 Source code for a tutorial on using FlashPunk 1.6 and Ogmo Editor 2.1.
+
+https://github.com/zachwlewis/ogmo-dash
 
 Tutorial 1
 ----------
@@ -21,3 +23,21 @@ Zachary goes over the codebase, the basics of working with an Ogmo Editor 2 proj
   * Reading XML data from an Ogmo Editor level.
   * Parsing XML to create an entity.
   * Parsing a bitstring to create a Grid.
+
+Tutorial 2
+----------
+Zachary covers adding properties to levels in Ogmo Editor and adding new entities with placement limits and resizeability. Additionally, he discusses an efficient way to work with multiple levels.
+
+[Tutorial 2 on YouTube](http://www.youtube.com/watch?v=piSTP8iBxbc)
+
+### Tutorial Goals
+* Ogmo Editor
+  * Creating level properties.
+  * Setting level properties.
+  * Creating a resizable entity.
+  * Creating a limited-placement entity.
+  * Moving and resizing entities.
+* FlashPunk
+  * Getting level properties from a map.
+  * Iterating through entities.
+  * Adding entities with position and size.
