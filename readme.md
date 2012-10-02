@@ -34,7 +34,7 @@ Tutorial 2
 ----------
 Zachary covers adding properties to levels in Ogmo Editor and adding new entities with placement limits and resizeability. Additionally, he discusses an efficient way to work with multiple levels.
 
-* [Tutorial 2 on YouTube](http://youtu.be/5MHNPI7Iizs)
+* [Tutorial 2 on YouTube](http://youtu.be/v5iLEJSTDGo)
 * [Source code on GitHub](https://github.com/downloads/zachwlewis/ogmo-dash/ogmo-dash-tutorial-2.zip)
 
 ### Tutorial Goals
