@@ -222,7 +222,7 @@ package worlds
 			var finish:FinishArea = FinishArea(player.collide("finish", player.x, player.y));
 			if (finish != null)
 			{
-				// TODO: Handle finishing and saving the player's progress.
+				// Handle finishing and saving the player's progress.
 				setGameState(STATE_SUCCESS);
 			}
 		}
@@ -246,17 +246,19 @@ package worlds
 			// Pre-align our world to prevent view snapping.
 			angle = player.angle;
 			
-			// TODO: Add code for stars.
+			// Add code for stars.
 			for each (node in mapXML.Entities.Star)
 			{
 				add(new Star(int(node.@x), int(node.@y)));
 			}
 			
-			// TODO: Add code for finish.
+			// Add code for finish.
 			for each (node in mapXML.Entities.Finish)
 			{
 				add(new FinishArea(int(node.@x), int(node.@y), int(node.@width), int(node.@height)));
 			}
+			
+			// TODO: Add code for the tilesheet.
 			
 		}
 		

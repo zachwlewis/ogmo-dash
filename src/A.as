@@ -18,6 +18,9 @@ package
 		/** The scrolling background. */
 		[Embed(source = "../assets/background.png")] public static const BACKGROUND:Class;
 		
+		/** The tilesheet. */
+		[Embed(source = "../assets/tilesheet.png")] public static const TILESHEET:Class;
+		
 		/** The fonts. */
 		[Embed(source = '../assets/Orbitron Black.ttf', embedAsCFF = "false", fontFamily = 'orbitron black')] public static const FONT_ORBITRON_BLACK:Class;
 		[Embed(source = '../assets/Orbitron Bold.ttf', embedAsCFF = "false", fontFamily = 'orbitron bold')] public static const FONT_ORBITRON_BOLD:Class;

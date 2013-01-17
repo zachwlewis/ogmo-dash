@@ -36,7 +36,7 @@ package entities
 		{
 			_data = xmlData;
 			
-			// TODO: Get level name from XML
+			// Get level name from XML
 			var xml:XML = FP.getXML(xmlData);
 			_name = xml.@Name;
 		}
