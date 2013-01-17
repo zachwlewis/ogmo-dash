@@ -13,6 +13,8 @@ Tutorial 1
 ----------
 Zachary goes over the codebase, the basics of working with an Ogmo Editor 2 project and reading XML with FlashPunk's toolset, creating a Grid and spawning a Player.
 
+<iframe width="640" height="360" src="http://www.youtube.com/embed/TPPzgB3fv8A" frameborder="0" allowfullscreen></iframe>
+
 * [Tutorial 1 on YouTube](http://youtu.be/TPPzgB3fv8A)
 * [Source code on GitHub](https://github.com/downloads/zachwlewis/ogmo-dash/ogmo-dash-tutorial-1.zip)
 
