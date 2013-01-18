@@ -60,7 +60,7 @@ package worlds
 			FP.screen.angle = angle;
 			
 			// Add reference background.
-			addGraphic(background, 1);
+			addGraphic(background, 100);
 		}
 		
 		protected function centerScreenAt(cx:int, cy:int):void

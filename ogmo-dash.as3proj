@@ -6,9 +6,9 @@
     <movie input="" />
     <movie path="bin\newflashpunkandogmo.swf" />
     <movie fps="30" />
-    <movie width="800" />
-    <movie height="600" />
-    <movie version="10" />
+    <movie width="512" />
+    <movie height="488" />
+    <movie version="11" />
     <movie minorVersion="1" />
     <movie platform="Flash Player" />
     <movie background="#FFFFFF" />
@@ -83,7 +83,7 @@
   <!-- Other project options -->
   <options>
     <option showHiddenPaths="False" />
-    <option testMovie="Default" />
+    <option testMovie="NewWindow" />
   </options>
   <!-- Plugin storage -->
   <storage />

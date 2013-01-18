@@ -17,7 +17,7 @@ package worlds
 		protected var map:Entity;
 		
 		protected var _mapGrid:Grid;
-		protected var _mapImage:Image;
+		protected var _mapImage:Graphic;
 		protected var _mapData:Class;
 		protected var _gameState:uint;
 		
@@ -51,12 +51,21 @@ package worlds
 				player = new Player(640, 640);
 			}
 			
-			// Create an image based on the map's data and scale it accordingly.
-			_mapImage = new Image(_mapGrid.data);
-			_mapImage.scale = 32;
+			// Create an image based on the map's data and scale it accordingly, if
+			// no tilemap exists.
+			if (_mapImage == null)
+			{
+				// Create a debug map.
+				var mi:Image = new Image(_mapGrid.data);
+				mi.scale = 32;
+				
+				// Set the map image.
+				_mapImage = mi;
+			}
 			
 			// Create a map entity to render and check collision with.
 			map = new Entity(0, 0, _mapImage, _mapGrid);
+			map.layer = 10;
 		}
 		
 		/** Called when World is switch to, and set to the currently active world. */
@@ -258,7 +267,15 @@ package worlds
 				add(new FinishArea(int(node.@x), int(node.@y), int(node.@width), int(node.@height)));
 			}
 			
-			// TODO: Add code for the tilesheet.
+			// Add code for the tilesheet.
+			if (String(mapXML.Tiles).length > 0)
+			{
+				var tm:Tilemap = new Tilemap(A.TILESHEET, _mapGrid.width, _mapGrid.height, 16, 16);
+				tm.loadFromString(mapXML.Tiles, ",", "\n");
+				
+				// Save the tilemap as the map image.
+				_mapImage = tm;
+			}
 			
 		}
 		
